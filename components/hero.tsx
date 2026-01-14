@@ -5,8 +5,8 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative">
-      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+    <section className="relative h-[105vh] flex items-center">
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-32 md:pt-52 md:pb-40">
         <div className="mx-auto max-w-4xl text-center">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 drop-shadow-lg">
@@ -47,7 +47,6 @@ export function Hero() {
               </Link>
             </Button>
           </div>
-
         </div>
       </div>
 

@@ -23,7 +23,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <Navbar className="top-0">
+    <Navbar className="top-5">
       {/* Desktop Navigation */}
       <NavBody>
         <a

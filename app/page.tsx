@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="relative">
+      <div className="relative -mt-20">
         {/* Background Image for Header and Hero */}
         <div className="absolute inset-0 opacity-90 dark:opacity-5">
           <Image
