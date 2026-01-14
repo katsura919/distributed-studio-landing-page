@@ -37,7 +37,7 @@ export function Header() {
 
         <NavItems items={navItems} />
 
-        <NavbarButton href="#contact" variant="dark">
+        <NavbarButton href="#contact" className="bg-primary" variant="dark">
           Book a Call
         </NavbarButton>
       </NavBody>

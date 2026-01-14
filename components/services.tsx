@@ -13,18 +13,32 @@ import { motion } from "motion/react";
 
 export function Services() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={cn("[&>p:text-lg]", item.className)}
-          icon={item.icon}
-        />
-      ))}
-    </BentoGrid>
+    <section id="services" className="py-20 md:py-28 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            Remote Staffing Solutions
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            We provide end-to-end remote staffing tailored to your business
+            needs.
+          </p>
+        </div>
+
+        <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem]">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={cn("[&>p:text-lg]", item.className)}
+              icon={item.icon}
+            />
+          ))}
+        </BentoGrid>
+      </div>
+    </section>
   );
 }
 
@@ -60,7 +74,6 @@ const SkeletonOne = () => {
       whileHover="animate"
       className="flex flex-1 w-full h-full min-24 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-      
       <motion.div
         variants={variants}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/20 p-2  items-center space-x-2 bg-white dark:bg-black"
@@ -186,51 +199,48 @@ const SkeletonFour = () => {
         variants={first}
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/10 border border-neutral-200 flex flex-col items-center justify-center"
       >
-        <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
+        <div className="h-12 w-12 rounded-full bg-linear-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-3">
+          <span className="text-white text-xl font-bold">M</span>
+        </div>
+        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-700 dark:text-neutral-300 mt-2">
+          Monthly Retainers
         </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
+        <p className="text-xs text-neutral-500 text-center mt-2">
+          Predictable costs, ongoing support
+        </p>
+        <p className="border border-blue-500 bg-blue-100 dark:bg-blue-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          Flexible
         </p>
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/10 border border-neutral-200 flex flex-col items-center justify-center">
-        <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
+        <div className="h-12 w-12 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-3">
+          <span className="text-white text-xl font-bold">L</span>
+        </div>
+        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-700 dark:text-neutral-300 mt-2">
+          Long-term Placements
+        </p>
+        <p className="text-xs text-neutral-500 text-center mt-2">
+          Committed team members
         </p>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
+          Stable
         </p>
       </motion.div>
       <motion.div
         variants={second}
         className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/10 border border-neutral-200 flex flex-col items-center justify-center"
       >
-        <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
+        <div className="h-12 w-12 rounded-full bg-linear-to-br from-orange-500 to-red-500 flex items-center justify-center mb-3">
+          <span className="text-white text-xl font-bold">T</span>
+        </div>
+        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-700 dark:text-neutral-300 mt-2">
+          Trial-to-Hire Options
         </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
+        <p className="text-xs text-neutral-500 text-center mt-2">
+          Test before commitment
+        </p>
+        <p className="border border-purple-500 bg-purple-100 dark:bg-purple-900/20 text-purple-600 text-xs rounded-full px-2 py-0.5 mt-4">
+          Risk-Free
         </p>
       </motion.div>
     </motion.div>
@@ -272,34 +282,33 @@ const SkeletonFive = () => {
         variants={variants}
         className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/20 p-2  items-start space-x-2 bg-white dark:bg-black"
       >
-        <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
+        <div className="h-8 w-8 rounded-full bg-linear-to-br from-green-500 to-emerald-500 flex items-center justify-center shrink-0">
+          <span className="text-white text-xs font-bold">DS</span>
+        </div>
         <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
+          Hi! Just checking in on your new team member. How's performance this
+          week?
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/20 p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
-        <div className="h-6 w-6 rounded-full bg-linear-to-r from-pink-500 to-violet-500 shrink-0" />
+        <p className="text-xs text-neutral-500">
+          Excellent! Thanks for the support 👍
+        </p>
+        <div className="h-6 w-6 rounded-full bg-linear-to-br from-blue-500 to-cyan-500 shrink-0" />
       </motion.div>
     </motion.div>
   );
 };
 const items = [
   {
-    title: "AI Content Generation",
+    title: "Talent Sourcing & Vetting",
     description: (
       <span className="text-sm">
-        Experience the power of AI in generating unique content.
+        We screen for skills, experience, communication, and cultural fit—so you
+        only meet candidates worth hiring.
       </span>
     ),
     header: <SkeletonOne />,
@@ -307,10 +316,13 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Automated Proofreading",
+    title: "Role-Based Placements",
     description: (
       <span className="text-sm">
-        Let AI handle the proofreading of your documents.
+        We place professionals in roles such as: Virtual Assistants & Admin
+        Support, Customer Support Representatives, Social Media & Marketing
+        Specialists, Designers & Creative Talent, Tech & Operations Support.
+        (Custom roles available upon request.)
       </span>
     ),
     header: <SkeletonTwo />,
@@ -318,10 +330,11 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Dedicated Team Members",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Hire full-time or part-time remote professionals who work exclusively
+        for your company, aligned to your timezone and workflow.
       </span>
     ),
     header: <SkeletonThree />,
@@ -329,22 +342,23 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Sentiment Analysis",
+    title: "Flexible Hiring Models",
     description: (
       <span className="text-sm">
-        Understand the sentiment of your text with AI analysis.
+        Monthly retainers • Long-term placements • Trial-to-hire options. Scale
+        up or down as your business evolves.
       </span>
     ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
-
   {
-    title: "Text Summarization",
+    title: "Ongoing Support & Management",
     description: (
       <span className="text-sm">
-        Summarize your lengthy documents with AI technology.
+        We don't disappear after placement. Our team provides continuous support
+        to ensure performance, retention, and satisfaction on both sides.
       </span>
     ),
     header: <SkeletonFive />,
