@@ -8,7 +8,7 @@ const processData = [
   {
     title: "Discovery Call",
     content: (
-      <Card className="border-border">
+      <Card className="border-border bg-white">
         <CardContent className="pt-6">
           <div className="flex items-start gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
@@ -32,7 +32,7 @@ const processData = [
   {
     title: "Talent Matching",
     content: (
-      <Card className="border-border">
+      <Card className="border-border bg-white">
         <CardContent className="pt-6">
           <div className="flex items-start gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
@@ -57,7 +57,7 @@ const processData = [
   {
     title: "Interview & Selection",
     content: (
-      <Card className="border-border">
+      <Card className="border-border bg-white">
         <CardContent className="pt-6">
           <div className="flex items-start gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
@@ -81,7 +81,7 @@ const processData = [
   {
     title: "Onboarding & Support",
     content: (
-      <Card className="border-border">
+      <Card className="border-border bg-white">
         <CardContent className="pt-6">
           <div className="flex items-start gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
@@ -107,7 +107,7 @@ const processData = [
 
 export function Process() {
   return (
-    <section id="process" className="py-20 md:py-28 bg-background">
+    <section id="process" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
