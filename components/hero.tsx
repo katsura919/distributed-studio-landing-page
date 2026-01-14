@@ -48,10 +48,6 @@ export function Hero() {
             </Button>
           </div>
 
-          {/* Tagline */}
-          <p className="mt-12 text-sm md:text-base font-semibold text-primary tracking-wide">
-            Remote talent. Real results. Zero borders.
-          </p>
         </div>
       </div>
 

@@ -1,30 +1,107 @@
+"use client";
+
+import { Timeline } from "@/components/ui/timeline";
 import { Card, CardContent } from "@/components/ui/card";
 import { PhoneCall, Users, CheckCircle, Headset } from "lucide-react";
 
-const steps = [
+const processData = [
   {
-    number: "01",
-    icon: PhoneCall,
     title: "Discovery Call",
-    description: "We understand your needs and goals",
+    content: (
+      <Card className="border-border">
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
+              <PhoneCall className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Understanding Your Needs
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We start with a free discovery call to understand your business
+                goals, team culture, and specific talent requirements. No
+                pressure, just a conversation about how we can help you scale.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    ),
   },
   {
-    number: "02",
-    icon: Users,
     title: "Talent Matching",
-    description: "Shortlisted candidates within days",
+    content: (
+      <Card className="border-border">
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
+              <Users className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Curated Candidates
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Within days, we present you with a shortlist of pre-vetted
+                candidates who match your technical requirements and cultural
+                fit. Every candidate goes through rigorous screening and skills
+                assessment.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    ),
   },
   {
-    number: "03",
-    icon: CheckCircle,
     title: "Interview & Selection",
-    description: "You choose who fits best",
+    content: (
+      <Card className="border-border">
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
+              <CheckCircle className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                You Make the Final Choice
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Interview the candidates and select who fits best with your
+                team. We facilitate the process but you have complete control
+                over hiring decisions. Your success is our priority.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    ),
   },
   {
-    number: "04",
-    icon: Headset,
     title: "Onboarding & Support",
-    description: "We assist every step of the way",
+    content: (
+      <Card className="border-border">
+        <CardContent className="pt-6">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shrink-0">
+              <Headset className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Continuous Partnership
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                From day one, we assist with seamless onboarding and provide
+                ongoing support. Whether it's managing payroll, ensuring
+                compliance, or addressing any challenges—we're with you every
+                step of the way.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    ),
   },
 ];
 
@@ -32,74 +109,16 @@ export function Process() {
   return (
     <section id="process" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             Our Process
           </h2>
-          <p className="text-lg text-primary font-semibold mb-2">
+          <p className="text-lg text-muted-foreground">
             Simple. Efficient. Human.
           </p>
         </div>
 
-        {/* Desktop Timeline */}
-        <div className="hidden lg:block">
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
-
-            <div className="grid grid-cols-4 gap-8 relative z-10">
-              {steps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <Card className="border-border hover:shadow-lg transition-shadow mb-4 bg-card">
-                    <CardContent className="pt-6 pb-6">
-                      <div className="w-16 h-16 mx-auto rounded-full bg-primary flex items-center justify-center mb-4 shadow-lg">
-                        <step.icon className="h-8 w-8 text-primary-foreground" />
-                      </div>
-                      <div className="text-4xl font-bold text-primary/20 mb-2">
-                        {step.number}
-                      </div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {step.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile/Tablet Vertical Timeline */}
-        <div className="lg:hidden space-y-8">
-          {steps.map((step, index) => (
-            <div key={index} className="flex gap-4">
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
-                  <step.icon className="h-6 w-6 text-primary-foreground" />
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="w-0.5 h-full bg-border mt-2" />
-                )}
-              </div>
-              <Card className="flex-1 border-border">
-                <CardContent className="pt-6">
-                  <div className="text-2xl font-bold text-primary/20 mb-1">
-                    {step.number}
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {step.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
-        </div>
+        <Timeline data={processData} />
       </div>
     </section>
   );
