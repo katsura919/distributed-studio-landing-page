@@ -3,6 +3,7 @@ import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
 import { Services } from "@/components/services";
+import { GlobalReach } from "@/components/global-reach";
 import { Clients } from "@/components/clients";
 import { Testimonials } from "@/components/testimonials";
 import { Process } from "@/components/process";
@@ -34,6 +35,7 @@ export default function Home() {
         <Clients />
         <Testimonials />
         <Process />
+        <GlobalReach />
         <Contact />
       </main>
       <Footer />

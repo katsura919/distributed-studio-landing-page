@@ -31,7 +31,7 @@ export function Header() {
           className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
         >
           <span className="text-xl font-bold text-primary dark:text-primary">
-            Distributed Studio
+            Talent Mucho
           </span>
         </a>
 
